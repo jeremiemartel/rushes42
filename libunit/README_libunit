@@ -1,0 +1,26 @@
+The libunit framework includes functions to create tests routines.
+
+-------------------------------------------------------------------------------
+
+Look into ./tests folder to see an example of test routine
+
+-------------------------------------------------------------------------------
+
+Functions to use in libunit.a:
+
+	* Create a the linked chain with different call of that function
+
+void		load_test(t_test **start, char *function_name, int (*test)(void));
+		- start : begining of the list
+		- function_name : arbitrary name, just for displaying functions
+		- test : test function
+
+	* Launch the test routine
+
+int				launch_test(t_test *start);
+		-start : begining of the chained list.
+
+-------------------------------------------------------------------------------
+
+All the tests functions must be prototyped like this : int	test_name(void);
+	and return SUCCESS and FAILURE value, defined in libunit.h
