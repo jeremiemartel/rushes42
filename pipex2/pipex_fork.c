@@ -43,8 +43,6 @@ int			pipex_fork(t_list *list, char **env)
 	{
 		pipex = (t_pipex*)list->content;
 		pid = fork();
-		if (pid > 5000)
-			exit(-1);
 		if (pid == 0)
 		{
 			dup2(pipex->fdin, 0);
