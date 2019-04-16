@@ -1,0 +1,6 @@
+This pipex can be used to get multiple pipes.
+Be carefull !! This version is not protected at all, use it as your own risks
+
+usage:
+	./pipex 'cmd opts' '|' 'cmd opts'
+You can add as many '|' 'cmd opts' as you want after that.
