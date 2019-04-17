@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/02 09:15:10 by jmartel           #+#    #+#             */
-/*   Updated: 2019/02/03 11:54:43 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/04/17 10:28:31 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int			main(int argc, char **argv, char **env)
 		return (pipex_usage());
 	if (!(pipex = pipex_parse(argc, argv, env)))
 		return (FAILURE);
-	pipex_pre_fork(pipex);
+	// t_pipex_put_list(pipex);
 	if (pipex_fork(pipex, env) == FAILURE)
 	{
 		ft_lstdel(&pipex, t_pipex_free);
